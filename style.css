@@ -438,7 +438,7 @@ footer i {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 3rem;
-        padding-top: 2rem;
+        padding-top: 0rem;
         text-align: center;
     }
 
