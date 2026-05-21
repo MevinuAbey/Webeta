@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://mevinu.online/sitemap.xml

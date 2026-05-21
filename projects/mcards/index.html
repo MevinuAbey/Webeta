@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHR8E3F63N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZHR8E3F63N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mcards | Secure Offline Digital Wallet by Mevinu Abeysinghe</title>
+    <link rel="canonical" href="https://mevinu.online/projects/mcards/" />
+
+    <meta name="description"
+        content="mcards by Mevinu Abeysinghe — a 100% offline, AES-256 encrypted digital wallet app protected by biometrics. Available for Android and Windows.">
+    <meta name="author" content="Mevinu Abeysinghe">
+    <meta name="keywords" content="mcards, digital wallet, AES-256, biometric, offline, Flutter, Android, Windows, Mevinu Abeysinghe">
+    <meta name="theme-color" content="#030305">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="mcards – Secure Offline Digital Wallet" />
+    <meta property="og:description" content="100% offline AES-256 encrypted digital wallet protected by biometrics. Your data never leaves your device." />
+    <meta property="og:image" content="https://mevinu.online/projects/mcards/mcards_logo.png" />
+    <meta property="og:url" content="https://mevinu.online/projects/mcards/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="mcards – Secure Offline Digital Wallet">
+    <meta name="twitter:description" content="100% offline AES-256 encrypted digital wallet. Your data never leaves your device.">
+    <meta name="twitter:image" content="https://mevinu.online/projects/mcards/mcards_logo.png">
+    <meta name="twitter:creator" content="@im_mevi">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "mcards",
+      "operatingSystem": "Android, Windows",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "A 100% offline, AES-256 encrypted digital wallet app protected by biometrics. Your data never leaves your phone.",
+      "url": "https://mevinu.online/projects/mcards/",
+      "author": {
+        "@type": "Person",
+        "name": "Mevinu Abeysinghe",
+        "url": "https://mevinu.online"
+      },
+      "downloadUrl": "https://github.com/MevinuAbey/mcards/releases",
+      "softwareVersion": "1.0",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList (signals hierarchy to Google for sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mevinu.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://mevinu.online/projects/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "mcards",
+          "item": "https://mevinu.online/projects/mcards/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (deferred for render performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+    
+    
+    
+
+    <nav class="navbar">
+        <a href="https://mevinu.online" class="logo">Mevinu<span class="dot">.</span></a>
+        <div class="nav-links">
+            <a href="https://mevinu.online">Home</a>
+            <a href="https://mevinu.online#about">About</a>
+            <a href="https://mevinu.online/blog">Blog</a>
+            <a href="https://mevinu.online#connect">Connect</a>
+            <a href="https://mevinu.online/projects" class="external-link active"
+                style="display: inline-flex; flex-direction: column; align-items: center; line-height: 1.2; padding: 0.4rem 1rem;">
+                <span>Projects</span>
+                <span style="font-size: 0.7rem; opacity: 0.8; letter-spacing: 1px;">mcards</span>
+            </a>
+        </div>
+        <button class="menu-btn" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <main>
+        <section class="mcards-hero">
+            <span class="app-tagline fade-in">Secure, Offline Digital Wallet</span>
+
+            <!-- App Logo -->
+            <img src="mcards_logo.png" alt="mcards Logo" class="app-logo fade-in-up">
+
+            <h1 class="name fade-in-up" style="font-size: 4rem; margin: 0 0 1rem 0;">mcards</h1>
+
+            <div class="badge-container fade-in-up delay-1">
+                <span class="badge"><i class="fas fa-wifi-slash"></i> 100% Offline</span>
+                <span class="badge"><i class="fas fa-shield-alt"></i> AES-256</span>
+                <span class="badge"><i class="fas fa-fingerprint"></i> Biometric</span>
+            </div>
+
+            <p class="app-description fade-in-up delay-2">
+                The safest place for your bank cards. Protected by AES-256 encryption and your unique
+                biometrics.
+                100% offline, 100% private. Your data never leaves your phone.
+            </p>
+
+            <div class="download-buttons fade-in-up delay-3">
+                <a href="#" class="btn primary" id="android-download"><i class="fab fa-android"></i> Android</a>
+                <a href="#" class="btn primary" id="ios-download"><i class="fab fa-apple"></i> iOS</a>
+                <a href="https://github.com/MevinuAbey/mcards/releases/download/webrelease/MCards_Setup.exe"
+                    class="btn secondary" id="windows-download" rel="noopener noreferrer"><i class="fab fa-windows"></i> Windows</a>
+            </div>
+        </section>
+
+        <section class="about" style="padding-top: 2rem;">
+            <div class="section-header">
+                <h2>Why mcards?</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Security -->
+                <div class="feature-card">
+                    <i class="fas fa-user-shield feature-icon"></i>
+                    <h3 class="feature-title">Security</h3>
+                    <p>Locked with <strong>AES-256 encryption</strong>—the same standard used
+                        by banks and militaries.</p>
+                    <ul style="margin-top: 1rem; list-style: none; color: #aaa; font-size: 0.9rem;">
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Unlock with FaceID / Fingerprint
+                        </li>
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Fallback Hashed 6-digit PIN</li>
+                        <li><i class="fas fa-check" style="color: var(--accent);"></i> Zero Knowledge Architecture</li>
+                    </ul>
+                </div>
+
+                <!-- Scanning -->
+                <div class="feature-card">
+                    <i class="fas fa-camera feature-icon"></i>
+                    <h3 class="feature-title">Smart Scanning</h3>
+                    <p>Point your camera to instantly capture card details using on-device Machine
+                        Learning.</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">Powered by Google ML Kit. Processed
+                        strictly on your device.</p>
+                </div>
+
+                <!-- Privacy -->
+                <div class="feature-card">
+                    <i class="fas fa-lock feature-icon"></i>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p>No internet. No cloud. No accounts.</p>
+                    <p style="margin-top: 1rem;">Your data
+                        <strong>never</strong> leaves your device.
+                    </p>
+                </div>
+
+                <!-- Layout/Design -->
+
+            </div>
+
+            <!-- Technical Section -->
+            <div class="tech-highlights">
+                <h3 class="feature-title" style="text-align: center;">Technical Highlights</h3>
+                <ul class="tech-list">
+                    <li class="tech-item">
+                        <h4>Engine</h4>
+                        <p>Built with <strong>Flutter</strong> for smooth, native performance on Android, iOS, Windows,
+                            macOS, and Linux.</p>
+                    </li>
+                    <li class="tech-item">
+                        <h4>Scanning</h4>
+                        <p>Uses local <strong>OCR</strong> (Optical Character Recognition) for instant data extraction.
+                        </p>
+                    </li>
+                    <li class="tech-item">
+                        <h4>Storage</h4>
+                        <p>Secure Encrypted Storage using native <strong>KeyChain</strong> (iOS) and
+                            <strong>Keystore</strong> (Android).
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="about" style="padding-top: 2rem;">
+            <div class="section-header">
+                <h2>Screenshots</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Platform Tabs -->
+            <div class="platform-tabs">
+                <button class="tab-btn active" data-platform="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </button>
+                <button class="tab-btn" data-platform="windows">
+                    <i class="fab fa-windows"></i> Windows
+                </button>
+            </div>
+
+            <!-- Screenshot Carousel -->
+            <div class="screenshot-carousel">
+                <!-- Mobile Screenshots -->
+                <div class="screenshot-container active" data-platform="mobile">
+                    <button class="carousel-btn prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="screenshot-wrapper">
+                        <img src="img/1.png" alt="mcards Mobile Screenshot 1" class="screenshot mobile-screenshot">
+                        <img src="img/2.png" alt="mcards Mobile Screenshot 2" class="screenshot mobile-screenshot">
+                        <img src="img/3.png" alt="mcards Mobile Screenshot 3" class="screenshot mobile-screenshot">
+                        <img src="img/4.png" alt="mcards Mobile Screenshot 4" class="screenshot mobile-screenshot">
+                        <img src="img/5.png" alt="mcards Mobile Screenshot 5" class="screenshot mobile-screenshot">
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Windows Screenshots -->
+                <div class="screenshot-container" data-platform="windows">
+                    <button class="carousel-btn prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="screenshot-wrapper">
+                        <img src="img/w1.png" alt="mcards Windows Screenshot 1" class="screenshot windows-screenshot">
+                        <img src="img/w2.png" alt="mcards Windows Screenshot 2" class="screenshot windows-screenshot">
+                        <img src="img/w3.png" alt="mcards Windows Screenshot 3" class="screenshot windows-screenshot">
+                        <img src="img/w4.png" alt="mcards Windows Screenshot 4" class="screenshot windows-screenshot">
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Screenshot Indicators -->
+            <div class="screenshot-indicators">
+                <div class="indicators mobile-indicators active">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                    <span class="indicator" data-index="4"></span>
+                </div>
+                <div class="indicators windows-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Warning Modal -->
+    <div id="mobile-warning-modal" class="modal">
+        <div class="modal-content glass">
+            <i class="fas fa-exclamation-triangle warning-icon"></i>
+            <h3>You're on a mobile device</h3>
+            <p>You are viewing this on a mobile device. download the <strong>Android</strong>
+                version for this platform.
+            </p>
+            <div class="modal-actions">
+                <a href="https://github.com/MevinuAbey/mcards/releases/download/webrelease/MCards_Setup.exe"
+                    id="download-anyway" class="btn secondary small">Download anyway</a>
+                <button id="close-modal" class="btn primary small">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Warning Modal (Android button on desktop) -->
+    <div id="desktop-warning-modal" class="modal">
+        <div class="modal-content glass">
+            <i class="fas fa-desktop warning-icon"></i>
+            <h3>You're on a Desktop</h3>
+            <p>You are viewing this on a desktop. download the <strong>Windows</strong> version for this platform.</p>
+            <div class="modal-actions">
+                <a href="#" id="android-anyway" class="btn secondary small">Download Android APK Anyway</a>
+                <button id="close-desktop-modal" class="btn primary small">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- iOS Status Modal (iOS version not ready) -->
+    <div id="ios-status-modal" class="modal">
+        <div class="modal-content glass">
+            <i class="fas fa-clock warning-icon" style="color: #ffb86c;"></i>
+            <h3>iOS Version Coming Soon</h3>
+            <p>The iOS version of <strong>mcards</strong> will come when i get a macbook :).</p>
+            <div class="modal-actions">
+                <button id="close-ios-modal" class="btn primary small">Stay Tuned</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Mevinu Thewjaya Abeysinghe</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script (Handles Navbar, Animations) -->
+    <script src="../../script.js"></script>
+
+    <script>
+        // Page-specific GSAP overrides or additions
+        // We wait for the main script to load, but since we are deferring or at end of body, it should be fine.
+        // However, the main script has a DOMContentLoaded listener.
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // App-specific animations
+            gsap.from(".badge-container", {
+                scrollTrigger: { trigger: ".badge-container", start: "top 90%" },
+                y: 30, opacity: 0, duration: 0.8, delay: 0.2
+            });
+
+            gsap.utils.toArray('.feature-card').forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: { trigger: card, start: "top 85%" },
+                    y: 50, opacity: 0, duration: 0.6, delay: i * 0.1
+                });
+            });
+
+            // Download Button Logic Refinement
+            const windowsBtn = document.getElementById('windows-download');
+            const androidBtn = document.getElementById('android-download');
+            const iosBtn = document.getElementById('ios-download');
+
+            const mobileModal = document.getElementById('mobile-warning-modal');
+            const desktopModal = document.getElementById('desktop-warning-modal');
+            const iosModal = document.getElementById('ios-status-modal');
+
+            const downloadWindowsAnyway = document.getElementById('download-anyway');
+            const downloadAndroidAnyway = document.getElementById('android-anyway');
+
+            const closeMobileModal = document.getElementById('close-modal');
+            const closeDesktopModal = document.getElementById('close-desktop-modal');
+            const closeIosModal = document.getElementById('close-ios-modal');
+
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+            }
+
+            // Windows Button logic
+            windowsBtn.addEventListener('click', (e) => {
+                if (isMobile()) {
+                    e.preventDefault();
+                    mobileModal.classList.add('active');
+                }
+            });
+
+            // Function to detect CPU architecture
+            function detectArchitecture() {
+                const ua = navigator.userAgent.toLowerCase();
+                const platform = navigator.platform?.toLowerCase() || '';
+
+                // Check for x86_64 (Intel/AMD 64-bit)
+                if (platform.includes('win64') || platform.includes('x86_64') ||
+                    ua.includes('x86_64') || ua.includes('amd64')) {
+                    return 'x86_64';
+                }
+
+                // Check for ARM architectures
+                if (ua.includes('arm64') || ua.includes('aarch64') || platform.includes('arm64')) {
+                    return 'arm64-v8a';
+                }
+
+                if (ua.includes('armv7') || ua.includes('armv8')) {
+                    return 'armeabi-v7a';
+                }
+
+                // Default to arm64-v8a for most modern Android devices
+                if (/android/i.test(ua)) {
+                    return 'arm64-v8a';
+                }
+
+                // Fallback to arm64-v8a (most common)
+                return 'arm64-v8a';
+            }
+
+            // Function to get APK download URL based on architecture
+            function getApkUrl(arch) {
+                const baseUrl = 'https://github.com/MevinuAbey/mcards/releases/download/webrelease/';
+                const apkFiles = {
+                    'arm64-v8a': 'macrds-arm64-v8a.apk',
+                    'armeabi-v7a': 'mcards-armeabi-v7a.apk',
+                    'x86_64': 'mcards-x86_64.apk'
+                };
+                return baseUrl + apkFiles[arch];
+            }
+
+            // Android Button logic
+            androidBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                if (!isMobile()) {
+                    desktopModal.classList.add('active');
+                } else {
+                    // Detect architecture and download appropriate APK
+                    const arch = detectArchitecture();
+                    const apkUrl = getApkUrl(arch);
+
+                    // Show a brief notification about which version is being downloaded
+                    const archNames = {
+                        'arm64-v8a': 'ARM64 (64-bit)',
+                        'armeabi-v7a': 'ARMv7 (32-bit)',
+                        'x86_64': 'x86_64 (Intel/AMD)'
+                    };
+
+                    console.log(`Downloading APK for ${archNames[arch]} architecture`);
+
+                    // Trigger download
+                    window.location.href = apkUrl;
+                }
+            });
+
+            // iOS Button logic
+            iosBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                iosModal.classList.add('active');
+            });
+
+            // "Anyway" buttons
+            downloadWindowsAnyway.addEventListener('click', () => {
+                mobileModal.classList.remove('active');
+            });
+
+            downloadAndroidAnyway.addEventListener('click', (e) => {
+                e.preventDefault();
+                desktopModal.classList.remove('active');
+
+                // Detect architecture and download appropriate APK
+                const arch = detectArchitecture();
+                const apkUrl = getApkUrl(arch);
+
+                const archNames = {
+                    'arm64-v8a': 'ARM64 (64-bit)',
+                    'armeabi-v7a': 'ARMv7 (32-bit)',
+                    'x86_64': 'x86_64 (Intel/AMD)'
+                };
+
+                console.log(`Downloading APK for ${archNames[arch]} architecture`);
+                window.location.href = apkUrl;
+            });
+
+            // Close buttons
+            closeMobileModal.addEventListener('click', () => mobileModal.classList.remove('active'));
+            closeDesktopModal.addEventListener('click', () => desktopModal.classList.remove('active'));
+            closeIosModal.addEventListener('click', () => iosModal.classList.remove('active'));
+
+            // Outside click to close all modals
+            [mobileModal, desktopModal, iosModal].forEach(m => {
+                m.addEventListener('click', (e) => {
+                    if (e.target === m) m.classList.remove('active');
+                });
+            });
+
+            // Screenshot Carousel Functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const screenshotContainers = document.querySelectorAll('.screenshot-container');
+            const indicatorGroups = document.querySelectorAll('.indicators');
+
+            let currentPlatform = 'mobile';
+            let currentIndices = {
+                mobile: 0,
+                windows: 0
+            };
+
+            // Initialize first screenshots
+            function initializeScreenshots() {
+                screenshotContainers.forEach(container => {
+                    const firstScreenshot = container.querySelector('.screenshot');
+                    if (firstScreenshot) {
+                        firstScreenshot.classList.add('active');
+                    }
+                });
+            }
+
+            // Platform tab switching
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const platform = btn.dataset.platform;
+
+                    // Update tabs
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update containers
+                    screenshotContainers.forEach(container => {
+                        container.classList.remove('active');
+                        if (container.dataset.platform === platform) {
+                            container.classList.add('active');
+                        }
+                    });
+
+                    // Update indicators
+                    indicatorGroups.forEach(group => {
+                        group.classList.remove('active');
+                        if (group.classList.contains(`${platform}-indicators`)) {
+                            group.classList.add('active');
+                        }
+                    });
+
+                    currentPlatform = platform;
+                });
+            });
+
+            // Carousel navigation
+            function updateCarousel(platform, direction) {
+                const container = document.querySelector(`.screenshot-container[data-platform="${platform}"]`);
+                const screenshots = container.querySelectorAll('.screenshot');
+                const indicators = document.querySelectorAll(`.${platform}-indicators .indicator`);
+
+                const totalScreenshots = screenshots.length;
+                let currentIndex = currentIndices[platform];
+
+                // Remove active class from current screenshot
+                screenshots[currentIndex].classList.remove('active');
+                indicators[currentIndex].classList.remove('active');
+
+                // Calculate new index
+                if (direction === 'next') {
+                    currentIndex = (currentIndex + 1) % totalScreenshots;
+                } else {
+                    currentIndex = (currentIndex - 1 + totalScreenshots) % totalScreenshots;
+                }
+
+                // Add active class to new screenshot
+                screenshots[currentIndex].classList.add('active');
+                indicators[currentIndex].classList.add('active');
+
+                currentIndices[platform] = currentIndex;
+            }
+
+            // Carousel button event listeners
+            document.querySelectorAll('.carousel-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const container = btn.closest('.screenshot-container');
+                    const platform = container.dataset.platform;
+                    const direction = btn.classList.contains('next') ? 'next' : 'prev';
+                    updateCarousel(platform, direction);
+                });
+            });
+
+            // Indicator click event listeners
+            document.querySelectorAll('.indicator').forEach(indicator => {
+                indicator.addEventListener('click', () => {
+                    const platform = currentPlatform;
+                    const targetIndex = parseInt(indicator.dataset.index);
+
+                    const container = document.querySelector(`.screenshot-container[data-platform="${platform}"]`);
+                    const screenshots = container.querySelectorAll('.screenshot');
+                    const indicators = document.querySelectorAll(`.${platform}-indicators .indicator`);
+
+                    // Remove active from all
+                    screenshots.forEach(s => s.classList.remove('active'));
+                    indicators.forEach(i => i.classList.remove('active'));
+
+                    // Add active to target
+                    screenshots[targetIndex].classList.add('active');
+                    indicators[targetIndex].classList.add('active');
+
+                    currentIndices[platform] = targetIndex;
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    updateCarousel(currentPlatform, 'prev');
+                } else if (e.key === 'ArrowRight') {
+                    updateCarousel(currentPlatform, 'next');
+                }
+            });
+
+            // Initialize
+            initializeScreenshots();
+        });
+        
+    </script>
+
+	<!-- Tawk.to Widget Code -->
+    <script type="text/javascript">
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src='https://embed.tawk.to/68725e6f202056191421dbca/1ivvc1puk';
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   	</script>
+</body>
+
+</html>

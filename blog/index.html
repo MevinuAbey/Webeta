@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – Mevinu Abeysinghe | Tech, AI & Development</title>
+    <link rel="canonical" href="https://mevinu.online/blog/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHR8E3F63N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZHR8E3F63N');
+    </script>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Read Mevinu Abeysinghe's blog — thoughts and tutorials on AI, machine learning, Flutter, and software development from a developer in Sri Lanka.">
+    <meta name="author" content="Mevinu Abeysinghe">
+    <meta name="keywords" content="Mevinu Abeysinghe, blog, AI, machine learning, Flutter, software development, Sri Lanka">
+    <meta name="theme-color" content="#030305">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog – Mevinu Abeysinghe" />
+    <meta property="og:description" content="Thoughts and tutorials on AI, machine learning, Flutter, and software development." />
+    <meta property="og:image" content="https://mevinu.online/web-app-manifest-512x512.png" />
+    <meta property="og:url" content="https://mevinu.online/blog/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog – Mevinu Abeysinghe">
+    <meta name="twitter:description" content="Thoughts and tutorials on AI, machine learning, Flutter, and software development.">
+    <meta name="twitter:image" content="https://mevinu.online/web-app-manifest-512x512.png">
+    <meta name="twitter:creator" content="@im_mevi">
+
+    <!-- Schema.org Structured Data: Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Mevinu Abeysinghe's Blog",
+      "url": "https://mevinu.online/blog/",
+      "author": {
+        "@type": "Person",
+        "name": "Mevinu Abeysinghe",
+        "url": "https://mevinu.online"
+      },
+      "description": "Thoughts and tutorials on AI, machine learning, Flutter, and software development."
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList (signals hierarchy to Google for sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mevinu.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://mevinu.online/blog/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (deferred for render performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Blog Specific Styles (Inline to reuse main CSS but add specifics) */
+        .blog-section {
+            padding: 8rem 10% 4rem;
+            min-height: 100vh;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            /* Remove padding to handle image nicely */
+            height: 100%;
+        }
+
+        .blog-card .thumbnail {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .blog-card .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .thumbnail img {
+            transform: scale(1.05);
+            /* Zoom effect */
+        }
+
+        .blog-card .content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-card .meta {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-card h3 a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--accent-purple);
+        }
+
+        .blog-card p {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            /* Limit text lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-purple);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .read-more-btn:hover {
+            color: var(--accent);
+        }
+
+        .loading,
+        .error {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 4rem;
+            color: var(--primary);
+            font-family: var(--font-heading);
+        }
+
+        .loading:after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0% {
+                content: '.';
+            }
+
+            33% {
+                content: '..';
+            }
+
+            66% {
+                content: '...';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    
+
+    <nav class="navbar">
+        <a href="https://mevinu.online" class="logo">Mevinu<span class="dot">.</span></a>
+        <div class="nav-links">
+            <a href="https://mevinu.online">Home</a>
+            <a href="https://mevinu.online#about">About</a>
+            <a href="https://mevinu.online/blog" class="active">Blog</a>
+            <a href="https://mevinu.online#connect">Connect</a>
+            <a href="https://mevinu.online/projects" class="external-link">Projects <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <button class="menu-btn" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <main>
+        <section class="blog-section">
+            <div class="section-header">
+                <h1>Blog</h1>
+                <div class="line"></div>
+                <p style="margin-top: 1rem; color: #888;">Thoughts on Tech, AI, and Life.</p>
+            </div>
+
+            <!-- Static fallback for search engine crawlers (hidden visually once JS loads) -->
+            <noscript>
+                <div style="padding: 2rem; color: #aaa;">
+                    <p>Read Mevinu Abeysinghe's articles on <a href="https://medium.com/@Mevinu" rel="noopener noreferrer" target="_blank" style="color:#00ff9d">Medium</a>. Topics include AI, machine learning, Flutter, and software development.</p>
+                </div>
+            </noscript>
+
+            <div id="feed" class="blog-grid">
+                <div class="loading">Fetching data from Medium</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Mevinu Thewjaya Abeysinghe</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+
+    <!-- GSAP (Needed for cursor and nav script mostly) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Reuse main script for nav and cursor -->
+    <script src="script.js"></script>
+
+	    <!-- Tawk.to Widget Code -->
+    <script type="text/javascript">
+       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+       (function(){
+       var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+       s1.async=true;
+       s1.src='https://embed.tawk.to/68725e6f202056191421dbca/1ivvc1puk';
+       s1.charset='UTF-8';
+       s1.setAttribute('crossorigin','*');
+       s0.parentNode.insertBefore(s1,s0);
+       })();
+   	</script>
+
+
+    <script>
+        // Medium RSS Feed Logic
+        async function loadFeed() {
+            const url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Mevinu";
+            const feed = document.getElementById("feed");
+            const defaultThumb = "https://via.placeholder.com/600x400/111111/333333?text=Mevi+Blog"; // Retro placeholder
+
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+
+                const data = await res.json();
+                if (!data.items || data.items.length === 0) throw new Error("No posts found");
+
+                feed.innerHTML = ""; // Clear loading
+
+                data.items.forEach(item => {
+                    // Extract thumbnail
+                    let thumb = defaultThumb;
+                    const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+                    if (imgMatch) thumb = imgMatch[1];
+
+                    // Clean description
+                    const cleanDesc = item.description
+                        .replace(/<[^>]+>/g, "")
+                        .trim()
+                        .substring(0, 120) + "...";
+
+                    // Date formatting
+                    const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'short', day: 'numeric'
+                    });
+
+                    // Create Card (Reusing .about-card style via 'blog-card' class mixin)
+                    const post = document.createElement("article");
+                    post.className = "about-card blog-card"; // Reuse base style + specific
+
+                    post.innerHTML = `
+                        <div class="thumbnail">
+                            <img src="${thumb}" alt="${item.title}" loading="lazy">
+                        </div>
+                        <div class="content">
+                            <div class="meta"><i class="far fa-calendar-alt"></i> ${date}</div>
+                            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+                            <p>${cleanDesc}</p>
+                            <a href="${item.link}" target="_blank" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    `;
+                    feed.appendChild(post);
+
+                    // Simple GSAP animate in for new items
+                    gsap.from(post, {
+                        y: 30, opacity: 0, duration: 0.5, ease: "power2.out"
+                    });
+                });
+
+            } catch (err) {
+                feed.innerHTML = `<div class="error">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 2rem; color: var(--accent-purple); margin-bottom: 1rem;"></i><br>
+                    Could not fetch posts.<br><span style="font-size: 0.8rem; color: #666;">${err.message}</span>
+                </div>`;
+                console.error("Feed load error:", err);
+            }
+        }
+
+        // Init
+        loadFeed();
+    </script>
+</body>
+
+</html>

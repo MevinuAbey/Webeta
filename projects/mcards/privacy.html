@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCards — Privacy Policy</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222;
+    background: #fff;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  h1 { font-size: 26px; font-weight: bold; margin: 0 0 4px; }
+  .subtitle { font-size: 15px; color: #555; margin: 0 0 4px; }
+  .meta { font-size: 13px; color: #888; margin-bottom: 32px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 32px 0; }
+  h2 { font-size: 17px; font-weight: bold; margin: 36px 0 8px; color: #111; }
+  h3 { font-size: 15px; font-weight: bold; margin: 20px 0 6px; color: #222; }
+  p { color: #444; margin: 0 0 12px; }
+  ul { padding-left: 24px; margin: 8px 0 12px; }
+  ul li { color: #444; margin-bottom: 4px; }
+  a { color: #1a5cff; }
+  .footer { margin-top: 48px; font-size: 12px; color: #aaa; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">MCards — Offline Card Vault</p>
+<p class="meta">Last Updated: March 2026 &nbsp;·&nbsp; Effective Date: March 2026</p>
+
+<hr>
+
+<p>MCards ("the App") is developed and published by Mevinu Abeysinghe ("Developer", "we", "us", or "our"). This Privacy Policy explains how MCards handles information when you use the application on Android or iOS devices.</p>
+<p>MCards is designed as a privacy-first, offline card vault. All card data is stored exclusively on your device. The App does not operate any cloud service, backend server, or account system for storing your personal data.</p>
+<p>By using MCards, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of the App.</p>
+
+<hr>
+
+<h2>1. Information We Collect</h2>
+<p>MCards does not collect or transmit your stored card data. Limited device information may be collected automatically by third-party advertising services such as Google AdMob.</p>
+<p>The App may store the following data locally on your device:</p>
+<ul>
+  <li>Card numbers</li>
+  <li>Cardholder names</li>
+  <li>Card expiry dates</li>
+  <li>CVV codes</li>
+  <li>Bank or issuer names</li>
+  <li>Notes related to cards</li>
+  <li>Loyalty card member IDs and barcodes</li>
+  <li>App unlock PIN (stored as a salted hash, not in plain text)</li>
+  <li>Emergency PIN (stored as a salted hash)</li>
+</ul>
+<p>This data never leaves your device and is never accessible to the Developer.</p>
+
+<h2>2. Local Data Storage and Encryption</h2>
+<p>All sensitive data stored by MCards is protected using industry-standard encryption:</p>
+<h3>Encryption</h3>
+<ul>
+  <li>AES-256-GCM encryption for all card data</li>
+  <li>Salted SHA-256 hashing for PIN codes</li>
+  <li>Encryption keys are never stored in plain text</li>
+</ul>
+<h3>Secure Key Storage</h3>
+<ul>
+  <li>Android: Android Keystore system and EncryptedSharedPreferences</li>
+  <li>iOS: Apple Keychain</li>
+</ul>
+<p>Card information is encrypted before being written to device storage and is only decrypted after the user successfully authenticates within the App.</p>
+<p>While industry-standard security measures are used, no method of electronic storage is 100% secure. Users should ensure their device is protected with a secure lock screen.</p>
+
+<h2>3. Authentication and Security</h2>
+<p>MCards includes multiple layers of security to prevent unauthorized access:</p>
+<ul>
+  <li>Biometric authentication (fingerprint or Face ID where available)</li>
+  <li>App unlock PIN</li>
+  <li>Automatic screen lock when the app moves to the background</li>
+  <li>Brute-force protection with progressive lockout delays after repeated failed attempts</li>
+  <li>Optional Emergency PIN that permanently erases all stored data</li>
+</ul>
+<p>These measures are designed to ensure that only you can access your stored card information.</p>
+
+<h2>4. Camera Permission</h2>
+<p>MCards may request access to your device camera solely for the following purposes:</p>
+<ul>
+  <li>Scanning payment card numbers using on-device text recognition</li>
+  <li>Scanning loyalty card barcodes using on-device barcode scanning</li>
+</ul>
+<p>The camera feed is processed entirely on-device. The App does not capture, store, or transmit photos or video to any external server or to the Developer. Camera access is optional; all cards can also be entered manually.</p>
+
+<h2>5. Advertising and Google Mobile Ads SDK</h2>
+<p>MCards uses the Google Mobile Ads SDK (AdMob) to display advertisements. This is the only third-party service in the App that may collect certain device data.</p>
+<h3>Data Collected by Google AdMob</h3>
+<p>Google AdMob may automatically collect the following information for the purpose of ad delivery, frequency capping, fraud prevention, and performance measurement:</p>
+<ul>
+  <li>Advertising ID (Google Advertising ID / IDFA)</li>
+  <li>IP address (used to infer approximate geographic location for ad targeting)</li>
+  <li>Device information (device model, OS version, screen resolution)</li>
+  <li>Ad interaction data (impressions, clicks, view duration)</li>
+  <li>App activity related to ad interactions</li>
+</ul>
+<p>This data is collected and processed by Google LLC in accordance with their policies. MCards does not access, process, or share your stored card data with Google AdMob or any advertising provider.</p>
+<p>For full details on how Google handles this data, please refer to the Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<h3>Your Advertising Choices</h3>
+<p>You can opt out of personalized advertising at any time:</p>
+<ul>
+  <li>Android: Settings › Google › Ads › Opt out of Ads Personalization</li>
+  <li>iOS: Settings › Privacy &amp; Security › Tracking › disable tracking for MCards</li>
+  <li>You may also reset your Advertising ID at any time from your device settings</li>
+</ul>
+
+<h2>6. Third-Party Libraries and Services</h2>
+<p>The App integrates the following categories of third-party libraries to provide its features. None of these libraries transmit your stored card data to external servers:</p>
+<ul>
+  <li>Secure encrypted storage libraries (local on-device only)</li>
+  <li>Biometric authentication libraries (interfaces with device OS)</li>
+  <li>On-device text recognition for card scanning (no data leaves the device)</li>
+  <li>On-device barcode scanning for loyalty cards (no data leaves the device)</li>
+  <li>Google Mobile Ads SDK for displaying advertisements (see Section 5)</li>
+</ul>
+<p>The App does not use Firebase, any crash reporting services, or any analytics SDK beyond what AdMob may inherently include.</p>
+
+<h2>7. No Analytics or Tracking by the Developer</h2>
+<p>MCards does not include any analytics, user behavior tracking, or crash reporting tools operated by or accessible to the Developer. Specifically, the App does not include:</p>
+<ul>
+  <li>User behavior or session analytics</li>
+  <li>Crash reporting services (e.g., Firebase Crashlytics, Sentry)</li>
+  <li>Account creation or login systems</li>
+  <li>Cloud synchronization of any kind</li>
+  <li>Any telemetry or usage statistics sent to the Developer</li>
+</ul>
+
+<h2>8. Data Safety (Google Play)</h2>
+<p>In accordance with Google Play's Data Safety requirements, the following summarizes data practices for MCards:</p>
+<ul>
+  <li>No personal data is collected or shared by the Developer</li>
+  <li>All card data is stored locally on-device and encrypted</li>
+  <li>Google AdMob may collect Advertising ID and device information for ads (see Section 5)</li>
+  <li>Users can delete all data at any time (see Section 9)</li>
+  <li>The App does not collect data from children</li>
+</ul>
+
+<h2>9. User Control and Data Deletion</h2>
+<p>You have full control over all data stored by MCards. You may delete all stored data at any time by:</p>
+<ul>
+  <li>Using the Reset / Clear All Data option within the App settings</li>
+  <li>Entering the Emergency PIN (if configured), which permanently wipes all stored data</li>
+  <li>Uninstalling the App — the operating system deletes all associated app data upon uninstallation</li>
+</ul>
+<p>There is no account to delete, and no data exists on any server that requires deletion requests.</p>
+
+<h2>10. Children's Privacy</h2>
+<p>MCards is intended for users aged 13 and older. The App is designed for managing personal financial and loyalty card information, which is not appropriate for children. MCards does not knowingly collect personal information from children under the age of 13 (or the applicable age of digital consent in your jurisdiction).</p>
+<p>If you are a parent or guardian and believe your child has provided personal information through the App, please contact us using the details in Section 12. We will take prompt steps to address the issue.</p>
+
+<h2>11. Changes to This Privacy Policy</h2>
+<p>This Privacy Policy may be updated from time to time to reflect changes in the App's features, applicable law, or third-party service practices. When changes are made, the "Last Updated" date at the top of this document will be revised.</p>
+<p>We encourage you to review this Privacy Policy periodically. Continued use of the App after any update constitutes your acceptance of the revised policy. For significant changes, we will endeavor to notify users through an in-app notice.</p>
+
+<h2>12. Contact Information</h2>
+<p>If you have questions, concerns, or requests regarding this Privacy Policy or the data practices of MCards, please contact:</p>
+<ul>
+  <li>Developer: Mevinu Abeysinghe</li>
+  <li>Website: <a href="https://mevinu.online">https://mevinu.online</a></li>
+  <li>Email: <a href="mailto:m.mevinuabeysingha@gmail.com">m.mevinuabeysingha@gmail.com</a></li>
+  <li>App: MCards — Offline Card Vault</li>
+</ul>
+<p>We will make reasonable efforts to respond to all inquiries in a timely manner.</p>
+
+<hr>
+
+<p class="footer">This privacy policy was prepared for MCards by Mevinu Abeysinghe. It is intended to comply with Google Play Store and Apple App Store requirements.</p>
+
+</body>
+</html>

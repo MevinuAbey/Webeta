@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – Mevinu Abeysinghe | Flutter, AI & More</title>
+    <link rel="canonical" href="https://mevinu.online/projects/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHR8E3F63N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZHR8E3F63N');
+    </script>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Projects by Mevinu Abeysinghe — including mcards, a secure offline digital wallet built with Flutter and AES-256 encryption. More coming soon.">
+    <meta name="author" content="Mevinu Abeysinghe">
+    <meta name="keywords" content="Mevinu Abeysinghe, projects, Flutter, mcards, digital wallet, AES-256, Sri Lanka">
+    <meta name="theme-color" content="#030305">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Projects – Mevinu Abeysinghe" />
+    <meta property="og:description" content="Projects by Mevinu Abeysinghe — mcards secure offline wallet, and more Flutter & AI projects." />
+    <meta property="og:image" content="https://mevinu.online/web-app-manifest-512x512.png" />
+    <meta property="og:url" content="https://mevinu.online/projects/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects – Mevinu Abeysinghe">
+    <meta name="twitter:description" content="Projects by Mevinu Abeysinghe — mcards secure offline wallet, and more.">
+    <meta name="twitter:image" content="https://mevinu.online/web-app-manifest-512x512.png">
+    <meta name="twitter:creator" content="@im_mevi">
+
+    <!-- Schema.org Structured Data: CollectionPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Projects – Mevinu Abeysinghe",
+      "url": "https://mevinu.online/projects/",
+      "author": {
+        "@type": "Person",
+        "name": "Mevinu Abeysinghe",
+        "url": "https://mevinu.online"
+      },
+      "description": "A collection of projects by Mevinu Abeysinghe, including mcards — a secure offline digital wallet."
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList (signals hierarchy to Google for sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mevinu.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://mevinu.online/projects/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (deferred for render performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Projects Page Specific Styles */
+        .projects-section {
+            padding: 8rem 10% 4rem;
+            min-height: 100vh;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Project Card (Based on about-card) */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-bottom: 2px solid var(--border);
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1) rotate(1deg);
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            pointer-events: none;
+        }
+
+        .content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-pill {
+            font-size: 0.7rem;
+            background: rgba(0, 255, 157, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.2rem 0.6rem;
+            text-transform: uppercase;
+            border-radius: 0;
+            /* Retro square */
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px var(--accent-purple);
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-btn {
+            flex: 1;
+            padding: 0.6rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        .project-btn.demo {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .project-btn.demo:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .project-btn.code {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .project-btn.code:hover {
+            background: var(--secondary);
+            color: #000;
+            box-shadow: 0 0 15px rgba(160, 160, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    
+
+    <nav class="navbar">
+        <a href="https://mevinu.online" class="logo">Mevinu<span class="dot">.</span></a>
+        <div class="nav-links">
+            <a href="https://mevinu.online">Home</a>
+            <a href="https://mevinu.online#about">About</a>
+            <a href="https://mevinu.online/blog">Blog</a>
+            <a href="https://mevinu.online#connect">Connect</a>
+            <a href="https://mevinu.online/projects" class="external-link active">Projects</a>
+        </div>
+        <button class="menu-btn" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <main>
+        <section class="projects-section">
+            <div class="section-header">
+                <h1>My Projects</h1>
+                <div class="line"></div>
+                <p style="margin-top: 1rem; color: #888;">A list of my projects.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- mcards Project -->
+                <article class="about-card project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="mcards App">
+                    </div>
+                    <div class="content">
+                        <div class="tech-stack">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                            <span class="tech-pill">Security</span>
+                        </div>
+                        <h3>mcards</h3>
+                        <p>Secure, Offline Digital Wallet. Protected by AES-256 encryption and biometrics.</p>
+                        <div class="project-links">
+                            <a href="mcards/" class="project-btn demo" rel="noopener">View Page</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- can add projects as in above format -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Mevinu Thewjaya Abeysinghe</p>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Animate Project Cards
+        gsap.from(".project-card", {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".projects-grid",
+                start: "top 80%"
+            }
+        });
+    </script>
+
+    <!-- Tawk.to Widget Code -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/68725e6f202056191421dbca/1ivvc1puk';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+</body>
+
+</html>
