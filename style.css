@@ -516,3 +516,32 @@ footer i {
         padding: 1rem;
     }
 }
+
+/* Infinite Marquee */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--accent);
+    border-top: var(--border-width) solid var(--border);
+    border-bottom: var(--border-width) solid var(--border);
+    padding: 1rem 0;
+    white-space: nowrap;
+    display: flex;
+}
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+}
+.marquee-content span {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+    padding-right: 1rem;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
