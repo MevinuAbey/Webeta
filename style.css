@@ -438,8 +438,20 @@ footer i {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 3rem;
-        padding-top: 8rem;
+        padding-top: 4rem;
         text-align: center;
+    }
+
+    .role {
+        width: 100%;
+        max-width: 320px;
+        min-height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-content {
