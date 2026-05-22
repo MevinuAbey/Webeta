@@ -138,7 +138,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
             pointer-events: none;
         }
 
@@ -158,7 +158,7 @@
 
         .tech-pill {
             font-size: 0.7rem;
-            background: rgba(0, 255, 157, 0.1);
+            background: #ff5f56;
             color: var(--accent);
             border: 1px solid var(--accent);
             padding: 0.2rem 0.6rem;
@@ -171,14 +171,14 @@
         .project-card h3 {
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
-            color: #fff;
+            color: #42205e;
             text-transform: uppercase;
             text-shadow: 2px 2px 0px var(--accent-purple);
         }
 
         .project-card p {
             font-size: 0.9rem;
-            color: #aaa;
+            color: #1c1c1c;
             margin-bottom: 1.5rem;
             line-height: 1.5;
             flex-grow: 1;
@@ -204,24 +204,24 @@
         }
 
         .project-btn.demo {
-            border-color: var(--accent);
-            color: var(--accent);
+            border-color: #42205e;
+            color: #42205e;
         }
 
         .project-btn.demo:hover {
-            background: var(--accent);
-            color: #000;
+            background: #42205e;
+            color: #ffffff;
             box-shadow: 0 0 15px var(--accent-glow);
         }
 
         .project-btn.code {
-            border-color: var(--secondary);
-            color: var(--secondary);
+            border-color: #ff5f56;
+            color: #ff5f56;
         }
 
         .project-btn.code:hover {
-            background: var(--secondary);
-            color: #000;
+            background: #ff5f56;
+            color: #2600ff;
             box-shadow: 0 0 15px rgba(160, 160, 255, 0.4);
         }
 
@@ -264,7 +264,7 @@
                 <!-- mcards Project -->
                 <article class="about-card project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        <img src="mcards/MCards Wallet.png"
                             alt="mcards App">
                     </div>
                     <div class="content">
@@ -282,6 +282,27 @@
                 </article>
 
                 <!-- can add projects as in above format -->
+
+                <!-- Sri Lanka Flood Monitor Project -->
+                <article class="about-card project-card">
+                    <div class="project-image">
+                        <img src="https://slwaterlevel.mevinu.online/flood-monitor-og-image.png"
+                            alt="Sri Lanka Flood Monitor">
+                    </div>
+                    <div class="content">
+                        <div class="tech-stack">
+                            <span class="tech-pill">Js</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">CSS</span>
+                            <span class="tech-pill">HTML</span>
+                        </div>
+                        <h3>Sri Lanka Flood Monitor</h3>
+                        <p>Real-time flood monitoring and alert Map for Sri Lanka.</p>
+                        <div class="project-links">
+                            <a href="https://slwaterlevel.mevinu.online/" class="project-btn demo" rel="noopener">Visit Site</a>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </section>
